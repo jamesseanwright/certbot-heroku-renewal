@@ -21,7 +21,7 @@ fi
 # endpoint only when renewal occurs
 # heroku config:set IS_ACME_ENABLED=true -a $heroku_app
 
-sudo certbot-auto renew --dry-run --quiet --no-self-upgrade
+sudo certbot-auto renew --quiet --no-self-upgrade
 
 heroku certs:update $letsencrypt_live_dir/$domain/cert.pem \
     $letsencrypt_live_dir/$domain/privkey.pem \
