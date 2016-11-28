@@ -9,6 +9,8 @@ A shell script to automate the renewal of Certbot SSL certificates and their dep
 * `DOMAIN` - the main domain name of the website you wish to renew. Can be found under `/etc/letsencrypt/live`
 * `HEROKU_APP_NAME` the name of the Heroku app against which the SSL certificates will be updated
 
+e.g. `sudo ./renew.sh foobar.co.uk foo-bar-app`
+
 Due to the opinionated directory permissions required by Certbot, this script must be run as root.
 
 
