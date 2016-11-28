@@ -12,7 +12,7 @@ fi
 
 if [ ! -e ~/.netrc ]
 then
-    echo "Heroku auto token not found. Requesting credentials..."
+    echo "Heroku auth token not found. Requesting credentials..."
     heroku login
 fi
 
