@@ -16,9 +16,9 @@ then
     heroku login
 fi
 
-# The below, commented line is used by my website to
-# enable the /.well-known/acme-challenge
-# endpoint only when renewal occurs
+# The below, commented demonstrates how a Heroku env variable
+# could be used to enable the /.well-known/acme-challenge
+# endpoint only when renewal occurs.
 # heroku config:set IS_ACME_ENABLED=true -a $heroku_app
 
 sudo certbot-auto renew --quiet --no-self-upgrade
@@ -28,5 +28,5 @@ heroku certs:update $letsencrypt_live_dir/$domain/cert.pem \
     -a $heroku_app \
     --confirm $heroku_app
 
-# Disables my website's ACME endpoint - see above
+# Disables the ACME endpoint; see above.
 # heroku config:unset IS_ACME_ENABLED -a $heroku_app
