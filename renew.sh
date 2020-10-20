@@ -19,7 +19,7 @@ fi
 # Enabled ACME endpoint
 heroku config:set IS_ACME_ENABLED=true -a $heroku_app
 
-sudo certbot certonly -n --standalone -d $heroku_app
+sudo certbot certonly -n --standalone -d $domain
 
 heroku certs:update $letsencrypt_live_dir/$domain/cert.pem \
     $letsencrypt_live_dir/$domain/privkey.pem \
