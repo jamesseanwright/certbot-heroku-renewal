@@ -17,7 +17,7 @@ then
 fi
 
 # Enabled ACME endpoint
-heroku config:set IS_ACME_ENABLED=true -a $heroku_app
+# heroku config:set IS_ACME_ENABLED=true -a $heroku_app
 
 sudo certbot certonly -n --standalone -d $domain
 
@@ -27,4 +27,4 @@ heroku certs:update $letsencrypt_live_dir/$domain/cert.pem \
     --confirm $heroku_app
 
 # Disables the ACME endpoint; see above.
-heroku config:unset IS_ACME_ENABLED -a $heroku_app
+# heroku config:unset IS_ACME_ENABLED -a $heroku_app
