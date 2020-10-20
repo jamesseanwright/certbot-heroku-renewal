@@ -11,7 +11,7 @@ A shell script to automate the renewal of Certbot SSL certificates and their dep
 
 e.g. `sudo ./renew.sh foobar.co.uk foo-bar-app`
 
-Due to the opinionated directory permissions required by Certbot, this script must be run as `root`.
+Due to the opinionated directory permissions required by Certbot, this script must be run as root.
 
 
 ## Conditionally Toggling The ACME Challenge Endpoint
