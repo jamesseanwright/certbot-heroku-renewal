@@ -16,7 +16,7 @@ then
     heroku login
 fi
 
-# Enabled ACME endpoint
+# Enables ACME endpoint
 # heroku config:set IS_ACME_ENABLED=true -a $heroku_app
 
 sudo certbot certonly -n --standalone -d $domain
