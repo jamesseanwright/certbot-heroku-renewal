@@ -2,6 +2,8 @@
 
 A shell script to automate the renewal of Certbot SSL certificates and their deployment to Heroku SSL.
 
+Please note that this only works with `certbot-auto` at present. For certificate renewals with `certbot`, see [jelko's fork](https://github.com/jelko/certbot-heroku-renewal).
+
 ## Usage
 
 `sudo ./renew.sh DOMAIN HEROKU_APP_NAME`
